@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>프로젝트 상세</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  <div class="max-w-4xl mx-auto mt-6 px-4">
+    <!-- 뒤로가기 -->
+    <a href="index.html" class="text-blue-500 hover:underline">← 이력서로 돌아가기</a>
+  </div>
+
+  <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mt-4 space-y-12">
+
+    <!-- 투두 리스트 프로젝트 -->
+    <section id="todo">
+      <h2 class="text-2xl font-bold">📝 투두 리스트 웹앱</h2>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">
+        사용자가 로그인하여 개인 투두를 등록하고 관리할 수 있는 웹 애플리케이션입니다.
+        Firebase의 인증 및 실시간 데이터베이스를 활용하였으며, React로 컴포넌트 기반 구조를 구성했습니다.
+      </p>
+      <ul class="list-disc list-inside mt-4">
+        <li>React + Firebase로 구현한 로그인 및 CRUD 기능</li>
+        <li>실시간 동기화, 반응형 UI 설계</li>
+        <li>로컬 스토리지 및 다크모드 지원</li>
+      </ul>
+      <a href="https://github.com/yourusername/todo-app" target="_blank" class="text-blue-500 underline mt-2 inline-block">🔗 GitHub 링크</a>
+    </section>
+
+    <!-- 리뷰 기반 추천 시스템 프로젝트 -->
+    <section id="recommendation">
+      <h2 class="text-2xl font-bold">🔍 리뷰 기반 추천 시스템</h2>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">
+        올리브영 리뷰 데이터를 수집하고, ChatGPT API를 활용해 리뷰 키워드를 추출하여 사용자에게 적합한 제품을 추천하는 시스템입니다.
+      </p>
+      <ul class="list-disc list-inside mt-4">
+        <li>크롤링 + ChatGPT API로 리뷰 요약/분류</li>
+        <li>임베딩 기반 유사도 계산으로 추천</li>
+        <li>Streamlit UI + 사용자 입력 기반 맞춤형 추천</li>
+      </ul>
+      <a href="https://github.com/yourusername/review-recommender" target="_blank" class="text-blue-500 underline mt-2 inline-block">🔗 GitHub 링크</a>
+    </section>
+  </div>
+</body>
+</html>

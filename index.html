@@ -1,137 +1,136 @@
 <!DOCTYPE html>
 <html lang="ko" class="">
-<head>
-  <meta charset="UTF-8" />
-  <title>PORTFOLIO_마다현</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Tailwind 설정
-    tailwind.config = {
-      darkMode: 'class',
-    };
-  </script>
-  <script>
-    // 초기 다크모드 적용
-    if (
-      localStorage.getItem("theme") === "dark" ||
-      (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>PORTFOLIO_마다현</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind 설정
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+    <script>
+      // 초기 다크모드 적용
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
 
-    // 초기 언어 설정
-    if (localStorage.getItem("lang") === "en") {
-      document.documentElement.lang = "en";
-    }
-  </script>
-</head>
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+      // 초기 언어 설정
+      if (localStorage.getItem("lang") === "en") {
+        document.documentElement.lang = "en";
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- 토글 버튼 -->
-  <div class="max-w-4xl mx-auto text-right mt-4 px-4 space-x-2">
-    <button id="themeToggle" class="px-4 py-2 bg-gray-600 dark:bg-gray-700 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition">🌙</button>
-    <button id="langToggle" class="px-4 py-2 bg-gray-600 dark:bg-gray-700 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition">🌐</button>
-  </div>
-
-  <!-- 콘텐츠 -->
-  <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mt-4">
-    <!-- 프로필 -->
-    <div class="flex items-center space-x-6">
-      <img src="assets/profile.png" alt="프로필 사진" class="rounded-full w-28 h-28 object-cover ">
-      <div>
-        <h1 class="text-3xl font-bold">마다현</h1>
-        <p class="text-gray-600 dark:text-gray-300" data-ko="Frontend / Backend Developer" data-en="Frontend / Backend Developer">Frontend / Backend Developer</p>
-        <p class="text-sm mt-2 dark:text-gray-400" data-ko="📧 ddah0329m@gmail.com | 📞 010-6810-0084 | 🏠 서울시 강동구" data-en="📧 ddah0329m@gmail.com | 📞 010-6810-0084 | 🏠 Gangdong-gu, Seoul">📧 ddah0329m@gmail.com | 📞 010-6810-0084 | 🏠 서울시 강동구</p>
-      </div>
+    <!-- 토글 버튼 -->
+    <div class="max-w-4xl mx-auto text-right mt-4 px-4 space-x-2">
+      <button id="themeToggle" class="px-4 py-2 bg-gray-600 dark:bg-gray-700 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition">🌙</button>
+      <button id="langToggle" class="px-4 py-2 bg-gray-600 dark:bg-gray-700 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition">🌐</button>
     </div>
 
-    <!-- 프로필 섹션 -->
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="프로필" data-en="Profile">프로필</h2>
-      <p data-ko="끊임없이 성장하고 협업을 중요시하는 개발자입니다. 사용자 중심의 서비스를 고민하며, 문제 해결을 즐깁니다." data-en="A developer who values growth and collaboration. I focus on user-centered services and enjoy solving problems.">...</p>
-    </section>
-
-    <!-- 기술 스택 -->
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="기술 스택" data-en="Tech Stack">기술 스택</h2>
-      <ul class="list-disc list-inside grid grid-cols-2 gap-y-2">
-        <li>HTML / CSS / JavaScript / React</li>
-        <li>Python / Node.js / Java</li>
-        <li>MySQL / MongoDB</li>
-        <li>Git / Docker / VSCode</li>
-      </ul>
-    </section>
-
-    <!-- 프로젝트 -->
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="프로젝트 경험" data-en="Project Experience">프로젝트 경험</h2>
-      <div class="space-y-4">
-        <a href="project.html#todo" class="block p-4 bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg shadow transition">
-          <h3 class="text-lg font-bold" data-ko="📝 투두 리스트 웹앱" data-en="📝 To-Do List Web App">📝 투두 리스트 웹앱</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-300" data-ko="React + Firebase 기반의 인증/CRUD 웹앱" data-en="Authentication/CRUD web app built with React + Firebase">...</p>
-        </a>
-        <a href="project.html#recommendation" class="block p-4 bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg shadow transition">
-          <h3 class="text-lg font-bold" data-ko="🔍 리뷰 기반 추천 시스템" data-en="🔍 Review-Based Recommendation System">🔍 리뷰 기반 추천 시스템</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-300" data-ko="Olive Young 리뷰 + ChatGPT API 기반 추천" data-en="Recommendation using Olive Young reviews + ChatGPT API">...</p>
-        </a>
+    <!-- 콘텐츠 -->
+    <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mt-4">
+      <!-- 프로필 -->
+      <div class="flex items-center space-x-6">
+        <img src="assets/profile.png" alt="프로필 사진" class="rounded-full w-28 h-28 object-cover ">
+        <div>
+          <h1 class="text-3xl font-bold">마다현</h1>
+          <p class="text-gray-600 dark:text-gray-300" data-ko="Frontend / Backend Developer" data-en="Frontend / Backend Developer">Frontend / Backend Developer</p>
+          <p class="text-sm mt-2 dark:text-gray-400" data-ko="📧 ddah0329m@gmail.com | 📞 010-6810-0084 | 🏠 서울시 강동구" data-en="📧 ddah0329m@gmail.com | 📞 010-6810-0084 | 🏠 Gangdong-gu, Seoul">📧 ddah0329m@gmail.com | 📞 010-6810-0084 | 🏠 서울시 강동구</p>
+        </div>
       </div>
-    </section>
 
-    <!-- 학력 -->
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="학력" data-en="Education">학력</h2>
-      <p data-ko="한국성서대학교 컴퓨터소프트웨어학과 (2022.03 ~ 재학중)" data-en="Korea Bible University, Computer Software (2022.03 ~ Present)">...</p>
-    </section>
+      <!-- 프로필 섹션 -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="프로필" data-en="Profile">프로필</h2>
+        <p data-ko="끊임없이 성장하고 협업을 중요시하는 개발자입니다. 사용자 중심의 서비스를 고민하며, 문제 해결을 즐깁니다." data-en="A developer who values growth and collaboration. I focus on user-centered services and enjoy solving problems.">...</p>
+      </section>
 
-    <!-- 기타 활동 -->
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="기타 활동" data-en="Other Activities">기타 활동</h2>
-      <ul class="list-disc list-inside">
-        <li data-ko="LG Aimers 5기 - 불량 예측 AI 모델 개발" data-en="LG Aimers 5th Cohort - Defect Prediction AI Model">...</li>
-        <li data-ko="OUTTA AI 부트캠프 - 데이터 기반 프로젝트 수료" data-en="OUTTA AI Bootcamp - Data-driven Project">...</li>
-      </ul>
-    </section>
-  </div>
+      <!-- 기술 스택 -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="기술 스택" data-en="Tech Stack">기술 스택</h2>
+        <ul class="list-disc list-inside grid grid-cols-2 gap-y-2">
+          <li>HTML / CSS / JavaScript / React</li>
+          <li>Python / Node.js / Java</li>
+          <li>MySQL / MongoDB</li>
+          <li>Git / Docker / VSCode</li>
+        </ul>
+      </section>
 
-  <!-- 토글 기능 스크립트 -->
-  <script>
-    // 다크모드 토글
-    const toggleButton = document.getElementById('themeToggle');
-    toggleButton.addEventListener('click', () => {
-      const html = document.documentElement;
-      const isDark = html.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      toggleButton.innerText = isDark ? '☀️' : '🌙';
-    });
+      <!-- 프로젝트 -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="프로젝트 경험" data-en="Project Experience">프로젝트 경험</h2>
+        <div class="space-y-4">
+          <a href="project.html#todo" class="block p-4 bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg shadow transition">
+            <h3 class="text-lg font-bold" data-ko="📝 투두 리스트 웹앱" data-en="📝 To-Do List Web App">📝 투두 리스트 웹앱</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300" data-ko="React + Firebase 기반의 인증/CRUD 웹앱" data-en="Authentication/CRUD web app built with React + Firebase">...</p>
+          </a>
+          <a href="project.html#recommendation" class="block p-4 bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg shadow transition">
+            <h3 class="text-lg font-bold" data-ko="🔍 리뷰 기반 추천 시스템" data-en="🔍 Review-Based Recommendation System">🔍 리뷰 기반 추천 시스템</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-300" data-ko="Olive Young 리뷰 + ChatGPT API 기반 추천" data-en="Recommendation using Olive Young reviews + ChatGPT API">...</p>
+          </a>
+        </div>
+      </section>
 
-    // 언어 토글
-    const langToggle = document.getElementById('langToggle');
-      langToggle.addEventListener('click', () => {
-        const currentLang = document.documentElement.lang;
-        const newLang = currentLang === 'ko' ? 'en' : 'ko';
-        document.documentElement.lang = newLang;
-        localStorage.setItem('lang', newLang);
-        langToggle.innerText = newLang === 'ko' ? '🇺🇸' : '🇰🇷';
+      <!-- 학력 -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="학력" data-en="Education">학력</h2>
+        <p data-ko="한국성서대학교 컴퓨터소프트웨어학과 (2022.03 ~ 재학중)" data-en="Korea Bible University, Computer Software (2022.03 ~ Present)">...</p>
+      </section>
+
+      <!-- 기타 활동 -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold border-b pb-1 mb-4 border-gray-300 dark:border-gray-600" data-ko="기타 활동" data-en="Other Activities">기타 활동</h2>
+        <ul class="list-disc list-inside">
+          <li data-ko="LG Aimers 5기 - 불량 예측 AI 모델 개발" data-en="LG Aimers 5th Cohort - Defect Prediction AI Model">...</li>
+          <li data-ko="OUTTA AI 부트캠프 - 데이터 기반 프로젝트 수료" data-en="OUTTA AI Bootcamp - Data-driven Project">...</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- 토글 기능 스크립트 -->
+    <script>
+      // 다크모드 토글
+      const toggleButton = document.getElementById('themeToggle');
+      toggleButton.addEventListener('click', () => {
+        const html = document.documentElement;
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        toggleButton.innerText = isDark ? '☀️' : '🌙';
+      });
+
+      // 언어 토글
+      const langToggle = document.getElementById('langToggle');
+        langToggle.addEventListener('click', () => {
+          const currentLang = document.documentElement.lang;
+          const newLang = currentLang === 'ko' ? 'en' : 'ko';
+          document.documentElement.lang = newLang;
+          localStorage.setItem('lang', newLang);
+          langToggle.innerText = newLang === 'ko' ? '🇺🇸' : '🇰🇷';
+
+          document.querySelectorAll('[data-ko]').forEach(el => {
+            el.textContent = el.getAttribute(`data-${newLang}`);
+          });
+        });
+
+      // 페이지 로드 시 언어 및 버튼 아이콘 적용
+      window.addEventListener('DOMContentLoaded', () => {
+        const lang = localStorage.getItem('lang') || 'ko';
+        document.documentElement.lang = lang;
+        langToggle.innerText = lang === 'ko' ? '🇺🇸' : '🇰🇷';
 
         document.querySelectorAll('[data-ko]').forEach(el => {
-          el.textContent = el.getAttribute(`data-${newLang}`);
+          el.textContent = el.getAttribute(`data-${lang}`);
         });
+
+        // 다크모드 버튼 초기화
+        toggleButton.innerText = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
       });
-
-    // 페이지 로드 시 언어 및 버튼 아이콘 적용
-    window.addEventListener('DOMContentLoaded', () => {
-      const lang = localStorage.getItem('lang') || 'ko';
-      document.documentElement.lang = lang;
-      langToggle.innerText = lang === 'ko' ? '🇺🇸' : '🇰🇷';
-
-      document.querySelectorAll('[data-ko]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
-      });
-
-      // 다크모드 버튼 초기화
-      toggleButton.innerText = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
-    });
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
