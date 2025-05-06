@@ -37,7 +37,7 @@
   <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mt-4">
     <!-- 프로필 -->
     <div class="flex items-center space-x-6">
-      <img src="assets/profile.png" alt="프로필 사진" class="rounded-full w-28 h-28">
+      <img src="assets/profile.png" alt="프로필 사진" class="rounded-full w-28 h-28 object-cover ">
       <div>
         <h1 class="text-3xl font-bold">마다현</h1>
         <p class="text-gray-600 dark:text-gray-300" data-ko="Frontend / Backend Developer" data-en="Frontend / Backend Developer">Frontend / Backend Developer</p>
@@ -106,24 +106,30 @@
 
     // 언어 토글
     const langToggle = document.getElementById('langToggle');
-    langToggle.addEventListener('click', () => {
-      const currentLang = document.documentElement.lang;
-      const newLang = currentLang === 'ko' ? 'en' : 'ko';
-      document.documentElement.lang = newLang;
-      localStorage.setItem('lang', newLang);
+      langToggle.addEventListener('click', () => {
+        const currentLang = document.documentElement.lang;
+        const newLang = currentLang === 'ko' ? 'en' : 'ko';
+        document.documentElement.lang = newLang;
+        localStorage.setItem('lang', newLang);
+        langToggle.innerText = newLang === 'ko' ? '🇺🇸' : '🇰🇷';
 
-      document.querySelectorAll('[data-ko]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${newLang}`);
+        document.querySelectorAll('[data-ko]').forEach(el => {
+          el.textContent = el.getAttribute(`data-${newLang}`);
+        });
       });
-    });
 
-    // 페이지 로드 시 언어 적용
+    // 페이지 로드 시 언어 및 버튼 아이콘 적용
     window.addEventListener('DOMContentLoaded', () => {
       const lang = localStorage.getItem('lang') || 'ko';
       document.documentElement.lang = lang;
+      langToggle.innerText = lang === 'ko' ? '🇺🇸' : '🇰🇷';
+
       document.querySelectorAll('[data-ko]').forEach(el => {
         el.textContent = el.getAttribute(`data-${lang}`);
       });
+
+      // 다크모드 버튼 초기화
+      toggleButton.innerText = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
     });
   </script>
 
