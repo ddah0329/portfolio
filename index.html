@@ -1,22 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO_ddah0329</title>
+  <meta charset="UTF-8">
+  <title>홍길동 이력서</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>PORTFOLIO_ddah0329</h1>
-    <p>Welcome to my portfolio! Here you will find a collection of my projects and achievements.</p>
+<body class="bg-gray-100 text-gray-800">
+  <div class="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 sm:p-8 mt-10">
     
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="project1.html">Project 1</a></li>
-        <li><a href="project2.html">Project 2</a></li>
-        <li><a href="project3.html">Project 3</a></li>
-    </ul>
+    <div class="flex flex-col sm:flex-row items-center sm:items-start sm:space-x-6 space-y-4 sm:space-y-0">
+      <img src="assets/profile.png" alt="프로필 사진" class="rounded-full w-24 h-24 sm:w-28 sm:h-28">
+      <div class="text-center sm:text-left">
+        <h1 class="text-2xl sm:text-3xl font-bold">홍길동</h1>
+        <p class="text-gray-600">Frontend / Backend Developer</p>
+        <p class="text-sm mt-2">📧 email@example.com | 📞 010-1234-5678 | 🏠 서울시 강남구</p>
+      </div>
+    </div>
 
-    <h2>Contact</h2>
-    <p>If you would like to get in touch, please email me
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold border-b pb-1 mb-4">프로필</h2>
+      <p class="text-base">끊임없이 성장하고 협업을 중요시하는 개발자입니다. 사용자 중심의 서비스를 고민하며, 문제 해결을 즐깁니다.</p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold border-b pb-1 mb-4">기술 스택</h2>
+      <ul class="list-disc list-inside grid grid-cols-1 sm:grid-cols-2 gap-y-2">
+        <li>HTML / CSS / JavaScript / React</li>
+        <li>Python / Node.js / Java</li>
+        <li>MySQL / MongoDB</li>
+        <li>Git / Docker / VSCode</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold border-b pb-1 mb-4">프로젝트 경험</h2>
+      <div class="space-y-4">
+        <a href="project.html#todo" class="block p-4 bg-gray-50 hover:bg-gray-100 rounded-lg shadow transition">
+          <h3 class="text-lg font-bold">📝 투두 리스트 웹앱</h3>
+          <p class="text-sm text-gray-500">React + Firebase 기반의 인증/CRUD 웹앱</p>
+        </a>
+        <a href="project.html#recommendation" class="block p-4 bg-gray-50 hover:bg-gray-100 rounded-lg shadow transition">
+          <h3 class="text-lg font-bold">🔍 리뷰 기반 추천 시스템</h3>
+          <p class="text-sm text-gray-500">Olive Young 리뷰 + ChatGPT API 기반 추천</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold border-b pb-1 mb-4">학력</h2>
+      <p>한국성서대학교 컴퓨터소프트웨어학과 (2022.03 ~ 재학중)</p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold border-b pb-1 mb-4">기타 활동</h2>
+      <ul class="list-disc list-inside">
+        <li>LG Aimers 5기 - 불량 예측 AI 모델 개발</li>
+        <li>OUTTA AI 부트캠프 - 데이터 기반 프로젝트 수료</li>
+      </ul>
+    </section>
+  </div>
 </body>
+
 </html>
